@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CasillaProps {
     valor: string;
@@ -51,15 +51,20 @@ const Game: React.FC = () =>{
     const [jugadores, setJugadores] = useState(['X', 'O']);
     const [turno, setTurno] = useState(0);
 
-    const handleTurno = () => {
-        setTurno((turno) => (turno +1) %2);
-        setJugadores((jugadores) => [jugadores[1], jugadores[0]]);
-    };
+    useEffect (() => {
+        const handleTurno = () => {
+            setTurno((turno) => (turno + 1) % 2);
+            setJugadores((jugadores) => [jugadores[1], jugadores[0]]);
+
+        };
+        const intervalId = setInterval(handleTurno, 1000);
+        return () => clearInterval(intervalId);
+    }, [jugadores, turno]);
+
 
     return (
         <div className="app">
             <Cuadricula jugadores={jugadores}/>
-            <button onClick={handleTurno}>Cambiar Turno</button>
             <p>Turno actual: {turno === 0 ? 'X': 'O'}</p>
         </div>
     );
