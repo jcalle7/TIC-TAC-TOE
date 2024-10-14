@@ -57,7 +57,7 @@ const Game: React.FC = () =>{
             setJugadores((jugadores) => [jugadores[1], jugadores[0]]);
 
         };
-        const intervalId = setInterval(handleTurno, 1000);
+        const intervalId = setInterval(handleTurno, 5000);
         return () => clearInterval(intervalId);
     }, [jugadores, turno]);
 
