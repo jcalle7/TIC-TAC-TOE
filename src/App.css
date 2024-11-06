@@ -50,3 +50,27 @@ h2 {
   margin-top: 20px;
   color: #4CAF50;
 }
+
+.reset-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 20px auto; 
+}
+
+
+.reset-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+
+.reset-button:active {
+  transform: scale(0.95);
+}
