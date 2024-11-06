@@ -23,15 +23,15 @@ const Cell: React.FC<CellProps> = ({value, onClick}) => {
 **Explicación**
 - *¿Qué hace este fragmento de código?*
 
-Este código define un componente funcional de React llamado Cell. Este componente representa cada celda de la cuadrícula en el juego de Tic-Tac-Toe y acepta dos propiedades (props): `value`, que contiene el contenido de la celda (como "X" u "O"), y `onClick`, una función que se ejecuta cuando se hace clic en la celda.
+Este código define un componente funcional de React llamado `Cell`. Este componente representa cada celda de la cuadrícula en el juego de Tic-Tac-Toe y acepta dos propiedades (props): `value`, que contiene el contenido de la celda como `"X" o "O"`, y `onClick`, una función que se ejecuta cuando se hace clic en la celda.
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
-El Cell implementa el requisito de representar cada celda de la cuadrícula de forma modular, lo cual facilita el manejo individual de cada casilla en el tablero que permite reusabilidad.
+El componente `Cell` implementa el requisito de representar cada celda de la cuadrícula de forma modular, lo cual facilita el manejo individual de cada casilla en el tablero que permite reusabilidad.
 
 - *¿Por qué es la mejor forma de implementarlo?*
 
-La creación de un componente específico para cada casilla permite que el código sea más claro, modular y fácil de mantener. Además, el uso de props asegura que el componente Cell sea puro, ya que solo recibe datos sin alterarlos directamente.
+La creación de un componente específico para cada casilla permite que el código sea más claro, modular y fácil de mantener. Además, el uso de `props` asegura que el componente `Cell` sea puro, ya que solo recibe datos sin alterarlos directamente.
 
 ---
 - **Crear archivos con múltiples componentes:** Crear componentes para la cuadrícula, las casillas y los controles del juego.
@@ -118,11 +118,11 @@ Este fragmento usa JSX para definir la estructura visual de la aplicación, incl
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
-Utilizar JSX facilita el diseño de la interfaz de usuario (UI) de manera declarativa y permite integrar la estructura HTML en el código JavaScript.
+Utilizar `JSX` facilita el diseño de la interfaz de usuario UI de manera declarativa y permite integrar la estructura HTML en el código JavaScript.
 
 - *¿Por qué es la mejor forma de implementarlo?*
 
-JSX hace que el código sea más legible y permite manipular la UI en función del estado de React, lo que es ideal para aplicaciones interactivas.
+`JSX` hace que el código sea más legible y permite manipular la UI en función del estado de React, lo que es ideal para aplicaciones interactivas.
 
 ---
 - **Añadir llaves con JSX:** Utilizar llaves para controlar las casillas seleccionadas y verificar si hay un ganador.
@@ -205,7 +205,7 @@ Usar `props` mantiene `Cell` puro, separando la lógica y el estado de cada celd
 **Explicación**
 - *¿Qué hace este fragmento de código?*
 
- Maneja el clic en una celda, actualiza el tablero con el valor del jugador actual (X o O) y alterna el turno.
+ Maneja el clic en una celda, actualiza el tablero con el valor del jugador actual `X o O` y alterna el turno.
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
@@ -233,11 +233,11 @@ Permite un control claro y directo sobre el flujo del juego y la alternancia de 
 **Explicación**
 - *¿Qué hace este fragmento de código?*
 
-Mapea cada fila y celda de la cuadrícula para renderizar el componente Cell en cada posición.
+Mapea cada fila y celda de la cuadrícula para renderizar el componente `Cell` en cada posición.
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
-Utiliza map para generar los componentes Cell dinámicamente, representando cada celda en la cuadrícula.
+Utiliza `map` para generar los componentes `Cell` dinámicamente, representando cada celda en la cuadrícula.
 
 - *¿Por qué es la mejor forma de implementarlo?*
 
@@ -257,15 +257,15 @@ const Cell: React.FC<CellProps> = ({value, onClick}) => {
 **Explicación**
 - *¿Qué hace este fragmento de código?*
 
-Define el componente Cell que recibe value y onClick como propiedades sin modificar directamente el estado del juego.
+Define el componente `Cell` que recibe `value` y `onClick` como propiedades sin modificar directamente el estado del juego.
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
-Cell es un componente puro que solo recibe información a través de props y no cambia el estado directamente, asegurando la integridad de los datos en el componente principal.
+`Cell` es un componente puro que solo recibe información a través de props y no cambia el estado directamente, asegurando la integridad de los datos en el componente principal.
 
 - *¿Por qué es la mejor forma de implementarlo?*
 
-Mantener el componente puro garantiza que Cell no afecte accidentalmente el estado del juego, haciendo la aplicación más predecible y fácil de depurar.
+Mantener el componente puro garantiza que `Cell` no afecte accidentalmente el estado del juego, haciendo la aplicación más predecible y fácil de depurar.
 
 ---
 - **Entender la UI como árboles:** Organizar los componentes de forma jerárquica, donde las casillas son nodos hijos de la cuadrícula.
@@ -294,7 +294,7 @@ Mantener el componente puro garantiza que Cell no afecte accidentalmente el esta
 **Explicación**
 - *¿Qué hace este fragmento de código?*
 
-Estructura la interfaz de usuario en un árbol jerárquico donde `Game` es el componente principal, y `Cell` representa las hojas (nodos hijos) dentro de la cuadrícula.
+Estructura la interfaz de usuario en un árbol jerárquico donde `Game` es el componente principal, y `Cell` representa las hojas `nodos hijos` dentro de la cuadrícula.
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
@@ -430,11 +430,11 @@ const Game: React.FC = () => {
 **Explicación**
 - *¿Qué hace este fragmento de código?*
 
-Define el estado principal en el componente Game, que se comparte entre la cuadrícula y las celdas a través de props.
+Define el estado principal en el componente `Game`, que se comparte entre la cuadrícula y las celdas a través de `props`.
 
 - *¿Cómo cumple con el requisito de la habilidad?*
 
-Centraliza el estado en Game para que todos los componentes dependan de una sola fuente de verdad.
+Centraliza el estado en `Game` para que todos los componentes dependan de una sola fuente de verdad.
 
 - *¿Por qué es la mejor forma de implementarlo?*
 
