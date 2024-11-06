@@ -57,6 +57,16 @@ const Game: React.FC = () => {
         }
     };
 
+    const resetGame = () => {
+        setBoard([
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', ''],
+        ]);
+        setTurn('X');
+        setWinner(null);
+    };
+
     return (
         <div className="App">
             <h1>TIC - TAC - TOE</h1>
@@ -74,6 +84,9 @@ const Game: React.FC = () => {
                 ))}
             </div>
             {winner && <h2>Jugador {winner} ganó!</h2>}
+            <button onClick={resetGame} className="reset-button">
+            Reiniciar Juego
+            </button>
         </div>
     );
 };
